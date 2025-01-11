@@ -1,0 +1,6 @@
+- Go is fast, statically typed, compiled language
+- Go is a general purpose language: building web api, cloud services, etc.
+- Go Has built-in testing support
+- It is an OOP language
+- Install Go
+- VS code extension: Go
