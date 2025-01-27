@@ -1,37 +1,19 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+// import "fmt"
 
+// var yourScore = 89
+// //But if we put this inside main scope then it will not be accessible to other files, should be in the package scope to access
 
-func getInitials(name string) (string, string){
-	upperCase := strings.ToUpper(name)
+// func main() {
+// 	// var yourScore = 89 : can't access from other files if we put this variable here inside main scope
 
-	names := strings.Split(upperCase, "")
+// 	fmt.Println(packageLevelVariable)
 
-	var initials []string
+// 	packageLevelFunction("Gopher")
 
-	for _, value := range names {
-		initials = append(initials, value[:1])  //0:1 range. (0 to 1 range)
-	}
+// 	showScore()
 
-	if len(initials) > 1 {
-		return initials[0], initials[1]
-	}
-
-	return initials[0], "_"
-
-
-}
-
-func main() {
-	initial1, initial2 := getInitials("John Doe")
-	fmt.Println(initial1, initial2)
-
-	name1, name2 := getInitials("Abdullah")
-
-	fmt.Println(name1, name2)
-}
+// 		//To see the result we've to run both files: go run main.go 11-package-scope-1.go
+// }
 
