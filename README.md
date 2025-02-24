@@ -14,3 +14,7 @@
 12. Maps
 13. Pass by value
 14. Pointers
+15. Custom types (Struct)
+16. Receiver function
+17. Receiver function with pointers
+18. User input
