@@ -1,6 +1,11 @@
 package main
 
-// import "fmt"
+// import (
+// 	"bufio"
+// 	"fmt"
+// 	"os"
+// 	"strings"
+// )
 
 // //This is custom type or structure
 // type bill struct {
@@ -50,17 +55,6 @@ package main
 // 	return fs
 // }
 
-// func main() {
-//     myBill := newBill("John's Bill")
-
-// 	myBill.addItem("pie", 3.99)
-// 	myBill.addItem("cake", 5.99)
-// 	myBill.addItem("coffee", 2.99)
-
-// 	myBill.updateTip(10)
-//     fmt.Println(myBill.format())
-// }
-
 // // update the tip
 // func (b *bill) updateTip(tip float64) {
 // 	// (*b).tip = tip
@@ -75,3 +69,52 @@ package main
 // func (b *bill) addItem(name string, price float64) {
 // 	b.items[name] = price
 // }
+
+// func getInput(prompt string, r *bufio.Reader) (string, error){
+// 	fmt.Print(prompt)
+// 	input, err := r.ReadString('\n')
+
+// 	return  strings.TrimSpace(input), err
+// }
+
+// func promptOptions(b bill){
+// 	reader := bufio.NewReader(os.Stdin)
+// 	option, _ := getInput("Choose  option (a - add item, s - save bill, t - add tip) ", reader)
+
+// 	fmt.Println(option)
+
+// }
+
+// func createBill() bill {
+// 	//Bufio is package for Reader and which will read from the Stdin (terminal)
+// 	reader := bufio.NewReader(os.Stdin)
+
+// 	// fmt.Print("Create a new bill name: ")
+// 	// //When user type something and enter then it will read the input
+// 	// name, _ := reader.ReadString('\n')
+// 	// name = strings.TrimSpace(name) //to trim the space
+
+// 	name, _ := getInput("Create a new bill name: ", reader)
+
+// 	b := newBill(name)
+// 	fmt.Println("Created the bill - ", b.name)
+
+// 	return b
+// }
+
+// func main() {
+//     // myBill := newBill("John's Bill")
+
+// 	// myBill.addItem("pie", 3.99)
+// 	// myBill.addItem("cake", 5.99)
+// 	// myBill.addItem("coffee", 2.99)
+
+// 	// myBill.updateTip(10)
+//     // fmt.Println(myBill.format())
+// 	myBill := createBill()
+// 	promptOptions(myBill)
+
+// 	fmt.Println(myBill)
+
+// }
+
