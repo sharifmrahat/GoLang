@@ -18,3 +18,7 @@
 16. Receiver function
 17. Receiver function with pointers
 18. User input
+19. Switch Statements
+20. Parsing Float
+21. Saving Files
+22. Interfaces
